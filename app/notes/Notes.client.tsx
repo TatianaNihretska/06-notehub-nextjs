@@ -9,7 +9,7 @@ import NoteForm from "@/components/NoteForm/NoteForm";
 import { useEffect, useState } from "react";
 import { keepPreviousData, useQuery } from "@tanstack/react-query";
 import { fetchNotes } from "../../lib/api"
-import Loader from "@/components/Loader/Loadet";
+import Loader from "../loading";
 import toast, { Toaster } from "react-hot-toast";
 
 

@@ -1,5 +1,5 @@
 import NotesClient from "../Notes.client";
-import { NoteId } from "../../../lib/api";
+import { fetchNoteById } from "../../../lib/api";
 import {
   dehydrate,
   HydrationBoundary,
@@ -17,7 +17,7 @@ export default async function NoteDetails({ params }: Props) {
 
   await queryClient.prefetchQuery({
     queryKey: ["note", id],
-    queryFn: () => NoteId(id),
+    queryFn: () => fetchNoteById(id),
   });
 
   return (
